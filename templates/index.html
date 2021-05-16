@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Chroma</title>
+	</head>
+	<body>
+	<center>
+		<h1 style="color: {{color}};">Chroma</h1>
+		is like
+		<form method=get>
+			<input type="hidden" name="color" value="{{color}}"/>
+			<input type="hidden" name="colorA" value="{{colorA}}"/>
+			<input type="hidden" name="colorB" value="{{colorB}}"/>
+			<input type="submit" name="closest" value="colorA" style="background-color: {{colorA}};"/>
+			or
+			<input type="submit" name="closest" value="colorB" style="background-color: {{colorB}};"/>
+			<br/>
+			<input type="submit" value="neither"/>
+		</form>
+	</center>
+	</body>
+</html>

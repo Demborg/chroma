@@ -6,7 +6,7 @@
 	<center>
 		<h1 style="color: {{color}};">Chroma</h1>
 		is like
-		<form method=get>
+		<form action={{url_for("submit")}} method=post>
 			<input type="hidden" name="color" value="{{color}}"/>
 			<input type="hidden" name="colorA" value="{{colorA}}"/>
 			<input type="hidden" name="colorB" value="{{colorB}}"/>

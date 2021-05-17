@@ -14,6 +14,9 @@ class ColorTripplet(db.Model):
     close_color = db.Column(db.String(20), nullable=False)
     far_color = db.Column(db.String(20), nullable=False)
 
+    def __repr__(self):
+        return f"ColorTriplet(primary: {self.primary_color}, close: {self.close_color}, far: {self.far_color})"
+
 def random_css_color() -> str:
     return f"rgb({randint(0, 255)}, {randint(0, 255)}, {randint(0, 255)})"
 
@@ -40,3 +43,7 @@ def submit():
         db.session.commit()
 
     return redirect(url_for("home"))
+
+@app.route("/list")
+def list_triplets():
+    return render_template("list.html", color_triplets=ColorTripplet.query.all())

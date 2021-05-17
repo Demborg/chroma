@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Chroma listing</title>
+	</head>
+	<body>
+		<a href={{url_for("home")}}><h1>Chroma</h1></a>
+		<table>
+			<tr>
+				<th>Primary color</th>
+				<th>Close color</th>
+				<th>Far color</th>
+			</tr>
+			{% for triplet in color_triplets %}
+			<tr>
+				<td style="background-color: {{triplet.primary_color}};">color</td>
+				<td style="background-color: {{triplet.close_color}};">color</td>
+				<td style="background-color: {{triplet.far_color}};">color</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
